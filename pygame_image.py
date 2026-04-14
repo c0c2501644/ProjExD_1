@@ -40,7 +40,7 @@ def main():
 
         
         key_lst = pg.key.get_pressed()
-        dx = -1  # 基本の移動量（左に流れる）
+        dx = -1  
         dy = 0
         
         if key_lst[pg.K_UP]:    
@@ -51,7 +51,8 @@ def main():
             dx -= 1
         if key_lst[pg.K_RIGHT]: 
             dx += 2 
-
+        
+        kk_rct.move_ip(dx, dy)
 
         x = tmr % 3200 #練習5
 
